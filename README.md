@@ -15,7 +15,7 @@ sh MISET-seq.sh
 python Grid_filter.py
 
 ### 4.Analysis MISET-seq data in ArchR:
-Rscripts MISET-seq-ArchR.R
+Rscript MISET-seq-ArchR.R
 
 ### 5.Analysis MISET-seq data in Signac:
-Rscripts MISET-seq-Signac.R
+Rscript MISET-seq-Signac.R
