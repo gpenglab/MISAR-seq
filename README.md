@@ -3,8 +3,8 @@
 
 ![image](https://raw.githubusercontent.com/gpenglab/MISET-seq/main/MISET-seq.png)
 
-## MISET-seq data analysis pipeline
-### 1. Download and install cellranger-arc software from 10x genomic and replace their default barcode file:
+### MISET-seq data analysis pipeline
+### 1. Download and install cellranger-arc software from 10x genomics and replace their default barcode file:
 a. Enter cellranger-arc-2.0.1/lib/python/cellranger/barcodes/ and cellranger-arc-2.0.1/lib/python/atac/barcodes/ directory;
 
 b. Replace default barcode file "737K-arc-v1.txt.gz" with your new custom barcode (in barcode file, also named as "737K-arc-v1.txt.gz").
