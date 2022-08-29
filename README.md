@@ -1,5 +1,5 @@
 ## MISET-seq
-### The first spatial co-omics method, name as microfluidic indexing based spatial epigenome and transcriptome sequencing (MISET-seq).
+### The first spatial co-omics method, named as microfluidic indexing based spatial epigenome and transcriptome sequencing (MISET-seq).
 
 ![image](https://raw.githubusercontent.com/gpenglab/MISET-seq/main/MISET-seq.png)
 
