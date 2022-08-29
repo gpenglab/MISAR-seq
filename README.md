@@ -1,7 +1,7 @@
 ## MISET-seq
 ### The first spatial co-omics method, name as microfluidic indexing based spatial epigenome and transcriptome sequencing (MISET-seq).
 
-![content](https://github.com/gpenglab/MISET-seq/blob/f948e67f8e7eaff2f41b879623c330fc121d449e/MISET-seq.pdf)
+![image](./MISET-seq.pdf)
 
 ### 1.Replace barcode in cellranger-arc software (10x genomics)
 a. Enter cellranger-arc-2.0.1/lib/python/cellranger/barcodes/ and cellranger-arc-2.0.1/lib/python/atac/barcodes/ directory;
