@@ -2,6 +2,7 @@
 
 ### 1.Replace barcode in cellranger-arc
 a. Enter cellranger-arc-2.0.1/lib/python/cellranger/barcodes/ and cellranger-arc-2.0.1/lib/python/atac/barcodes/;
+
 b. Replace default barcode file "737K-arc-v1.txt.gz" with your new custom barcode file (in barcode_file, also named as "737K-arc-v1.txt.gz").
 
 ### 2.Generate fragments and raw_feature_bc matrix file for MISET-seq:
