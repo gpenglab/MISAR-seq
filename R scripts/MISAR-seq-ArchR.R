@@ -30,7 +30,7 @@ set.seed(123)
 #Set work directory
 setwd("~/MISAR-seq/Data")
 
-#Read MISET-seq fragments file into ArchR
+#Read MISAR-seq fragments file into ArchR
 input_ATAC <- c()
 for (i in sampleId){input_ATAC[i] <- paste0(i,'_filtered_fragments.tsv.bgz')}
 
@@ -55,7 +55,7 @@ proj <- ArchRProject(
 )
 
 #Add spatial location to proj
-barcode <- read.csv("~/MISAR-seq/barcode_file/MISET-seq_barcode.csv",header = T)
+barcode <- read.csv("~/MISAR-seq/barcode_file/MISAR-seq_barcode.csv",header = T)
 barcode_all<-rbind(barcode,barcode,barcode,barcode)
 rownames(barcode_all) <- paste0(c(rep(sampleId[1],2500),rep(sampleId[2],2500),rep(sampleId[3],2500),rep(sampleId[4],2500)),"#",barcode_all$barcode)
 barcode_final <- barcode_all[rownames(barcode_all)%in%rownames(proj),]
@@ -66,7 +66,7 @@ for (i in QC_index) {
   proj<- addCellColData(proj, data = barcode_final[,i], cells = rownames(barcode_final), name = i, force = T)
 }
 
-#Add MISET-seq RNA into proj
+#Add MISAR-seq RNA into proj
 #read RNA counts from h5 file
 input_RNA <- c()
 for (i in sampleId){input_RNA[i] <- paste0(i,'_raw_feature_bc_matrix.h5')}
