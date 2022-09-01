@@ -44,7 +44,7 @@ df <- TSSEnrichment(df, fast = FALSE)
 
 # The set of peaks identified using Cellranger often merges distinct peaks that are close together. This can create a problem for certain analyses, particularly motif enrichment analysis and peak-to-gene linkage.
 # call peaks using MACS2
-peaks <- CallPeaks(df, macs2.path = "/MISET-seq/macs2")
+peaks <- CallPeaks(df, macs2.path = "/MISAR-seq/macs2")
 
 # remove peaks on nonstandard chromosomes and in genomic blacklist regions, mouse:blacklist_mm10, human:blacklist_hg38_unified.
 peaks <- keepStandardChromosomes(peaks, pruning.mode = "coarse")
@@ -66,7 +66,7 @@ df[["peaks"]] <- CreateChromatinAssay(
 )
 
 # read spatial barcode file.
-barcode <- read.csv("/MISET-seq/barcode_file/MISET-seq_barcode.csv", header = T, row.names = 1)
+barcode <- read.csv("/MISAR-seq/barcode_file/MISAR-seq_barcode.csv", header = T, row.names = 1)
 
 # read and filter per_barcode_metrics.csv file which from cellranger
 metrics <- read.csv("per_barcode_metrics.csv", header = T, row.names = 1)
@@ -86,7 +86,7 @@ location <- read.table(paste0("position_", sampleId,".txt"), sep =",", header = 
 x <- as.character(location[1,])[-1]
 x <- as.data.frame(x)
 colnames(x) <- "array"
-y <- read.csv("/MISET-seq/barcode_file/MISET-seq_barcode_filter.csv", header = T) 
+y <- read.csv("/MISAR-seq/barcode_file/MISAR-seq_barcode_filter.csv", header = T) 
 z <- merge(x,y,by="array")
 
 df <- subset(df, cells=z$barcode)
