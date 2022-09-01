@@ -28,7 +28,7 @@ Color_RNA<-c("1"="#fcb462","2"="#9500ff","3"="#fb4f2b","4"="#4993b6","5"="#1e25c
 set.seed(123)
 
 #Set work directory
-setwd("~/MISET-seq/Data")
+setwd("~/MISAR-seq/Data")
 
 #Read MISET-seq fragments file into ArchR
 input_ATAC <- c()
@@ -55,7 +55,7 @@ proj <- ArchRProject(
 )
 
 #Add spatial location to proj
-barcode <- read.csv("~/MISET-seq/barcode_file/MISET-seq_barcode.csv",header = T)
+barcode <- read.csv("~/MISAR-seq/barcode_file/MISET-seq_barcode.csv",header = T)
 barcode_all<-rbind(barcode,barcode,barcode,barcode)
 rownames(barcode_all) <- paste0(c(rep(sampleId[1],2500),rep(sampleId[2],2500),rep(sampleId[3],2500),rep(sampleId[4],2500)),"#",barcode_all$barcode)
 barcode_final <- barcode_all[rownames(barcode_all)%in%rownames(proj),]
@@ -180,7 +180,7 @@ proj <- addClusters(
 
 
 #save RNA+ ATAC ArchR project
-saveRDS(proj,paste0(file_name,"_MISET-seq_ArchR.rds"))
+saveRDS(proj,paste0(file_name,"_MISAR-seq_ArchR.rds"))
 
 #save sample in umap plot for each data
 p1 <- plotEmbedding(proj, name = "Sample", embedding = "UMAP_RNA", rastr = FALSE, plotAs = "points", size = 0.5, labelAsFactors=F, labelMeans=F)
