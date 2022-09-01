@@ -1,28 +1,28 @@
 #!/usr/bin/bash
-#MISET-seq
+#MISAR-seq
 #Fuqing Jiang
 
-Main=/MISET-seq
+Main=/MISAR-seq
 sampleId="E15_5-S1"
 Data=$Main/Data
 Result=$Main/Result
 Scripts=$Main/Scripts
 
-ref='/MISET-seq/reference/refdata-cellranger-arc-mm10-2020-A-2.0.0'
+ref='/MISAR-seq/reference/refdata-cellranger-arc-mm10-2020-A-2.0.0'
 
 if [ ! -d $Data/$sampleId ];then
   mkdir $Data/$sampleId
 fi
 
 #Process RNA Barcode
-python $Scripts/MISET_Split_BC_RNA.py -i $Data/$sampleId"-RNA.R2.fastq.gz" -o $Data/$sampleId/$sampleId"_gex_S1_L001_R1_001.fastq"
+python $Scripts/MISAR_Split_BC_RNA.py -i $Data/$sampleId"-RNA.R2.fastq.gz" -o $Data/$sampleId/$sampleId"_gex_S1_L001_R1_001.fastq"
 
 pigz -p 100 -f $Data/$sampleId/$sampleId"_gex_S1_L001_R1_001.fastq" 
 
 cp $Data/$sampleId"-RNA.R1.fastq.gz" $Data/$sampleId/$sampleId"_gex_S1_L001_R2_001.fastq.gz"
 
 #Process ATAC Barcode
-python $Scripts/MISET_Split_BC_ATAC.py -i $Data/$sampleId"-ATAC.R2.fastq.gz" -o1 $Data/$sampleId/$sampleId"_atac_S1_L001_R3_001.fastq" -o2 $Data/$sampleId/$sampleId"_atac_S1_L001_R2_001.fastq"
+python $Scripts/MISAR_Split_BC_ATAC.py -i $Data/$sampleId"-ATAC.R2.fastq.gz" -o1 $Data/$sampleId/$sampleId"_atac_S1_L001_R3_001.fastq" -o2 $Data/$sampleId/$sampleId"_atac_S1_L001_R2_001.fastq"
 
 pigz -p 100 -f $Data/$sampleId/$sampleId"_atac_S1_L001_R3_001.fastq"
 
