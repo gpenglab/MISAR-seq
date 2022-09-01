@@ -1,8 +1,3 @@
-########################################################
-# Process R1 for cellranger-atac pipeline
-# Read2 sequence contained the barcode 
-########################################################
-
 from Bio.SeqIO.QualityIO import FastqGeneralIterator
 from gzip import open as gzopen
 
