@@ -4,9 +4,9 @@
 
 Main=/MISAR-seq
 sampleId="E15_5-S1"
-Data=$Main/Data
+Data=$Main/fastq
 Result=$Main/Result
-Scripts=$Main/Scripts
+Scripts=$Main/Python
 
 ref='/MISAR-seq/reference/refdata-cellranger-arc-mm10-2020-A-2.0.0'
 
