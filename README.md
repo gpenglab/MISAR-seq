@@ -18,3 +18,4 @@ python Grid_filter.py
 ### 4. Analysis MISAR-seq data:
 Rscript MISAR-seq.R
 
+PS: New version in ZENODO: https://doi.org/10.5281/zenodo.7480069
