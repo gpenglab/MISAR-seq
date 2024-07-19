@@ -1,6 +1,7 @@
 ## MISAR-seq
 ### The first high-throughput spatial co-omics method, named as microfluidic indexing based spatial ATAC and RNA sequencing (MISAR-seq).
-All RNA and ATAC fastq data can be download from NCBI: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP491963&o=acc_s%3Aa
+1. Added MISAR-seq_new.R and function_new.R scripts to plot marker gene's Gene_Score and Expression in spatial.
+2. All RNA and ATAC fastq data can be download from NCBI: https://www.ncbi.nlm.nih.gov/Traces/study/?acc=SRP491963&o=acc_s%3Aa
 
 ![image](https://raw.githubusercontent.com/gpenglab/MISAR-seq/main/MISAR-seq.png)
 
